@@ -1,0 +1,23 @@
+*{margin: 0; padding: 0;}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(255,255,255,0.3); /* 끝에 aa 투명도 조절 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999999;
+    box-sizing: border-box;
+    .logo{
+    a{color: #5866ff; text-decoration: none;}
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        li{
+            a{text-decoration: none; padding: 10px; color: #5866ff; font: 14px;}
+        }
+    }
+}
