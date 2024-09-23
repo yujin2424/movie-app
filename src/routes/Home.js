@@ -7,6 +7,8 @@ import Upcoming from '../components/Upcoming';
 const Home = () => {
    const [appMovie, setAppMovie] = useState([]);
    const [isLoading, setLoading] = useState(true);
+   const [visibleMovies, setVisibleMovies]=useState(6);
+   const moviesPerPage=3;
 
    const getMovies = async () =>{
       try{
@@ -24,6 +26,10 @@ const Home = () => {
    useEffect(()=>{
       getMovies();
    }, [])
+
+   const handleLoadeMore=()=>{
+      setVisibleMovies((preVisible) => preVisible+moviesPerPage );
+   }
    return (
 <>
         <Upcoming/>
@@ -34,11 +40,15 @@ const Home = () => {
                 {
                     isLoading ? (<div><span className='load'>Loading...</span></div>):(
                         <div className="appWrap">
-                        {appMovie.map((amovie)=>(<Appmovie key={amovie.id} title={amovie.title} poster_path={amovie.poster_path} release_date={amovie.release_date}/>))}
+                        {appMovie.slice(0, visibleMovies).map((amovie)=>(<Appmovie key={amovie.id} id={amovie.id} title={amovie.title} poster_path={amovie.poster_path} release_date={amovie.release_date}/>))}
                         </div>
                     )
                 }
-            
+               {
+                  appMovie.length > visibleMovies && (
+                     <div className='more'><button className='moreBtn' onClick={handleLoadeMore}>더보기</button></div>
+                  )
+               }
           </div>
 </>
    );

@@ -41,7 +41,6 @@ div{
     position: relative;
     img{
         width: 100%;
-        height: 80vh;
         }
     }
     .upinfoWrap{
@@ -58,5 +57,17 @@ div{
     .upInfo{
         margin-right: 30px;
     }
-    .upinfoText{}
+    .upinfoText{
+        
+    }
+}
+.more{
+    width: 100%;
+    text-align: center;
+    .moreBtn{
+        background: #0883bc;
+        color: #fff;
+        padding: 10px 30px;
+        border: none;
+    }
 }

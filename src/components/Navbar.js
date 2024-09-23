@@ -1,14 +1,19 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-
+import {Link, NavLink} from 'react-router-dom';
+/* import Logo from '../logo.svg'; */
+import { RiMovie2Line } from "react-icons/ri";
 const Navbar = () => {
+    const activeStyle={
+        color: 'red',
+        textShadow: '2px 2px 5px #000'
+    }
     return (
         <nav>
-            <div className="logo"><Link to="/">로고</Link></div>
+            <div className="logo"><Link to="/">{/* <img src={process.env.PUBLIC_URL+'/logo.svg'} alt="logo" /> */}<RiMovie2Line /></Link></div>
             <ul>
-                <li><Link to="">Home</Link></li>
-                <li><Link to="movies">Movies</Link></li>
-                <li><Link to="about">About</Link></li>
+                <li><NavLink to="" style={({isActive})=>(isActive?activeStyle : undefined)}>Home</NavLink></li>
+                <li><NavLink to="movies" style={({isActive})=>(isActive?activeStyle : undefined)}>Movies</NavLink></li>
+                <li><NavLink to="about" style={({isActive})=>(isActive?activeStyle : undefined)}>About</NavLink></li>
             </ul>
         </nav>
     );
