@@ -5,6 +5,7 @@ import Appmovie from '../components/Appmovie';
 import Upcoming from '../components/Upcoming';
 
 const Home = () => {
+   
    const [appMovie, setAppMovie] = useState([]);
    const [isLoading, setLoading] = useState(true);
    const [visibleMovies, setVisibleMovies]=useState(6);
@@ -22,7 +23,7 @@ const Home = () => {
          setLoading(false)
       }
    }
-
+   /* http://openapi.foodsafetykorea.go.kr/api/4325d997a6b44d6fb445/COOKRCP01/json/1/5 */
    useEffect(()=>{
       getMovies();
    }, [])

@@ -116,7 +116,7 @@ nav{
             .voteAverage{
                margin-bottom: 10px;
             }
-            .date{    
+  
          }
       }
    }
@@ -124,4 +124,10 @@ nav{
 .bold{
    font-weight: bold;
    color: #000;
+}
+.userWrap{
+   padding: 150px 20px;
+   h1{
+      text-align: center;
+   }
 }

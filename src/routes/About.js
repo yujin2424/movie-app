@@ -28,8 +28,7 @@ const About = () => {
                         <div className="overview"><span className='bold'>줄거리 :</span> {appM.overview}</div>
                         <div className="tagline"><span className="bold">태그 : </span>{appM.tagline}</div>
                         <div className="voteAverage"><span className='bold'>평점 : </span>{appM.vote_average} </div>
-                        <div className="date"><span className="bold">날짜 : </span>{appM.release_date
-                        }</div>
+                        <div className="date"><span className="bold">날짜 : </span>{appM.release_date}</div>
                      </div>
                   </div>
                </div>
