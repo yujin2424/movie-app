@@ -125,9 +125,115 @@ nav{
    font-weight: bold;
    color: #000;
 }
-.userWrap{
+.usersWrap{
    padding: 150px 20px;
    h1{
       text-align: center;
+   }
+   .userCard{
+      margin-top: 20px;
+      width: 100%;
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 0 30px;
+      box-sizing: border-box; /* 패딩 넓이가 클 때 텍스트에 넓이 맞게 조정 */
+      .card{
+         background: #ddd;
+         padding: 30px;
+         margin-bottom: 20px;
+         border-radius: 20px 0 20px 0;
+         box-shadow: 0 0 30px #000;
+         .cardBody{
+            font-size: 1.2rem;
+            a{
+               text-decoration: none;
+               color: #666;
+            }
+         }
+      }
+   }
+}
+.userWrap{
+   margin-top: 150px;
+   margin-bottom: 150px;
+   padding: 0 30px 100px 30px;
+   box-sizing: border-box;
+   h1{
+      margin-bottom: 50px;
+   }
+   .detail{
+      padding: 50px;
+      box-sizing: border-box;
+      background: white;
+      box-shadow: 0 0 30px;
+      .loading{
+         font-size: 1.6rem;
+      }
+      .userDetail{
+         p{
+            line-height: 300%;
+            span{
+               color: #666;
+            }
+         }
+      }
+   }
+}
+
+.eventsWrap{
+      padding: 150px 30px;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+   h2{
+      padding-bottom: 10px;
+      border-bottom: 1px solid #444;
+   }
+   h3{padding: 20px 0 0 0;}
+   .eventlistWrap{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .appEvent{
+         width: 32%;
+         .eventImg{
+            img{width: 100%;}
+   
+            }
+            .eventDate{
+               font-size: 0.8rem;
+               color: #666;
+            }   
+      }
+   }
+   img{width: 100%; margin-top: 50px;}
+}
+.bannerWrap{
+   width: 100%;
+   text-align: center;
+   background: #ffebdf;
+   position: relative;
+   height: 240px;
+   img{
+      position: absolute;
+      top: -25px;
+      left: 25%;
+      transform: translateX(-50%, -20%);
+   }
+}
+
+.eventWrap{
+   padding: 150px 30px;
+   box-sizing: border-box;
+
+   .addEvent{
+      .box{
+         width: 100%;
+         img{
+            width: 100%;
+            margin-bottom: 30px;
+         }
+      }
    }
 }
