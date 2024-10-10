@@ -13,7 +13,7 @@ const Home = () => {
 
    const getMovies = async () =>{
       try{
-         const response= await axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${APIKEY}&language=ko-KR`);
+         const response= await axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=546c72b99cf64514c2c03c7ef473011b&language=ko-KR`);
          setAppMovie(response.data.results)
          /* console.log(response.data) */
          setLoading(false)
